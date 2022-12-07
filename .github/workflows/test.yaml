@@ -33,6 +33,9 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
+            - name: Install libavif package
+              run: sudo apt-get -y install libavif-dev
+
             - uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php-version }}
